@@ -1,0 +1,50 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {ReactPageTitle} from '../components/react/ReactPageTitle';
+import VueContainer from '../components/vue/VueContainer.vue';
+---
+
+<Layout title="Welcome to Astro/React.">
+	<main>
+		<VueContainer>
+			<ReactPageTitle />
+			<a href="/">〱 Start Over</a>
+		</VueContainer>
+	</main>
+</Layout>
+
+<style>
+	main {
+		--primary-color: lightcoral;
+		
+		color: white;
+		font-size: 36px;
+		font-weight: 700;
+		line-height: 1.6;
+		margin: auto;
+		max-width: calc(100% - 2rem);
+		padding: 1rem;
+		width: 800px;
+
+		> div {
+			align-items: center;
+			border: 2px solid var(--primary-color);
+			border-radius: 18px;
+			display: flex;
+			flex-direction: column;
+			padding: 1rem;
+		}
+
+		a {
+			color: var(--primary-color);
+		}
+		
+		.text-gradient {
+			background-image: var(--accent-gradient);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-size: 400%;
+			background-position: 0%;
+		}
+	}
+</style>
